@@ -4,9 +4,11 @@ int main()
 {
     int n;
     cin>>n;
-    int arr[n][n+1];
+    double arr[n][n+1];
     for(int i=0;i<n;i++){
         cin>>arr[i][0];
+    }
+    for(int i=0;i<n;i++){
         cin>>arr[i][1];
     }
     for(int i=2;i<=n;i++){
@@ -22,12 +24,12 @@ int main()
         cout<<endl;
     }
     cout<<endl;
-    float r;
+    double r;
     cin>>r;
-    float p = (r-arr[0][0])/(arr[1][0]-arr[0][0]);
-    float x = p;
+    double p = (r-arr[0][0])/(arr[1][0]-arr[0][0]);
+    double x = p;
     cout<<p<<endl;
-    float ans = arr[0][1];
+    double ans = arr[0][1];
     int f = 1;
     for(int i=2;i<n+1;i++){
         ans+= (x*arr[0][i])/f;
@@ -37,3 +39,7 @@ int main()
     cout<<ans;
     return 0;
 }
+
+// 100 150 200 250 300 350 400
+
+// 10.63 13.03 15.04 16.81 18.42 19.90 21.27
